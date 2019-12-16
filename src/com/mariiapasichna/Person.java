@@ -70,7 +70,7 @@ public class Person {
         return weight = new Random().nextInt(55) + 45;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
