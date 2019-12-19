@@ -13,11 +13,7 @@ public class Task1 {
 не было человека весом 3 кг и ростом 180 итд.*/
 
     public static void main(String[] args) {
-        Person person = new Person();
-        Person[] persons = new Person[100];
-        for (int i = 0; i < persons.length; i++) {
-            persons[i] = new Person(person.getName(), person.getSurname(), person.getAge(), person.getWeight(), person.getHeight());
-            System.out.println(persons[i]);
-        }
+        Person[] persons = MakePerson.getPersons(Const.PERSONS);
+        System.out.println(Arrays.toString(persons));
     }
 }

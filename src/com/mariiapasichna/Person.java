@@ -1,84 +1,53 @@
 package com.mariiapasichna;
 
-import java.util.Random;
-
 public class Person {
 
-    private String name;
-    private String surname;
+    private String firstName;
+    private String lastName;
     private int age;
     private double weight;
     private int height;
 
-    public Person() {
-    }
-
-    public Person(String name, String surname, int age, double weight, int height) {
-        this.name = name;
-        this.surname = surname;
+    public Person(String firstName, String lastName, int age, double weight, int height) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
         this.weight = weight;
         this.height = height;
     }
 
-    public Person(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", weight=" + weight +
                 ", height=" + height +
                 '}';
     }
 
-    public String getName() {
-        String[] names = {"Mariia", "Anna", "Andrey", "Pavel", "Vitaly"};
-        int nameIndex = new Random().nextInt(names.length);
-        name = names[nameIndex];
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        String[] surnames = {"Litvinchuk", "Zholud", "Ignatenko", "Petrenko", "Chernenko"};
-        int nameIndex = new Random().nextInt(surnames.length);
-        surname = surnames[nameIndex];
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public String getLastName() {
+        return lastName;
     }
 
     public int getAge() {
-        return age = new Random().nextInt(42) + 18;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+        return age;
     }
 
     public double getWeight() {
-        return weight = new Random().nextInt(55) + 45;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
+        return weight;
     }
 
     public int getHeight() {
-        return height = new Random().nextInt(30) + 160;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
+        return height;
     }
 }
